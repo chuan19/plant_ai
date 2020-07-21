@@ -1,4 +1,9 @@
-this file except in compliance with the License.
+# python3
+#
+# Copyright 2019 The TensorFlow Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
 #     https://www.apache.org/licenses/LICENSE-2.0
@@ -9,6 +14,7 @@ this file except in compliance with the License.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """An annotation library that draws overlays on the Pi camera preview.
+
 Annotations include bounding boxes and text overlays.
 Annotations support partial opacity, however only with respect to the content in
 the preview. A transparent fill value will cover up previously drawn overlay
@@ -28,9 +34,11 @@ from PIL import ImageDraw
 
 def _round_up(value, n):
   """Rounds up the given value to the next number divisible by n.
+
   Args:
     value: int to be rounded up.
     n: the number that should be divisible into value.
+
   Returns:
     the result of value rounded up to the next multiple of n.
   """
@@ -39,11 +47,14 @@ def _round_up(value, n):
 
 def _round_buffer_dims(dims):
   """Appropriately rounds the given dimensions for image overlaying.
+
   As per the PiCamera.add_overlay documentation, the source data must have a
   width rounded up to the nearest multiple of 32, and the height rounded up to
   the nearest multiple of 16. This does that for the given image dimensions.
+
   Args:
     dims: image dimensions.
+
   Returns:
     the rounded-up dimensions in a tuple.
   """
@@ -56,6 +67,7 @@ class Annotator:
 
   def __init__(self, camera, default_color=None):
     """Initializes Annotator parameters.
+
     Args:
       camera: picamera.PiCamera camera object to overlay on top of.
       default_color: PIL.ImageColor (with alpha) default for the drawn content.
@@ -88,6 +100,7 @@ class Annotator:
 
   def bounding_box(self, rect, outline=None, fill=None):
     """Draws a bounding box around the specified rectangle.
+
     Args:
       rect: (x1, y1, x2, y2) rectangle to be drawn, where (x1, y1) and (x2, y2)
         are opposite corners of the desired rectangle.
@@ -101,6 +114,7 @@ class Annotator:
 
   def text(self, location, text, color=None):
     """Draws the given text at the given location.
+
     Args:
       location: (x, y) point at which to draw the text (upper left corner).
       text: string to be drawn.
