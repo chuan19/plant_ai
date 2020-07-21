@@ -1,5 +1,14 @@
 "# plant_ai" 
 
+包含以下技术：
+基于图像分类
+图像分割
+图像识别
+模型训练
+模型保存、恢复和转换
+神经网络迁移
+使用别人的数据集
+
 train.py --用于训练 注意是用笔记本或台式不是树莓派运行---- tensorflow2.2 python3.8 
 代码参考 https://www.tensorflow.org/tutorials/load_data/images?hl=zh_cn
 代码参考 https://www.tensorflow.org/tutorials/keras/save_and_load?hl=zh_cn
@@ -22,4 +31,11 @@ detect_picamera.py 物体识别代码 它依赖annotation.py
 启动：
    python3 detect_picamera.py \
   --model ./detect.tflite \
-  --labels ./coco_labels.txt
+  --labels ./labelmap.txt
+  
+参考：
+https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn#2_convert_the_model_format
+https://www.tensorflow.org/lite/guide/python?hl=zh-cn
+https://www.tensorflow.org/tutorials?hl=zh-cn
+https://medium.com/@prasad.pai/how-to-use-tensorflow-hub-with-code-examples-9100edec29af
+https://tfhub.dev/
