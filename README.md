@@ -2,12 +2,12 @@
 
 包含以下技术：
 基于图像分类
-图像分割
-图像识别
-模型训练
-模型保存、恢复和转换
-神经网络迁移
-使用别人的数据集
+图像分割			
+图像识别		
+模型训练			
+模型保存、恢复和转换				
+神经网络迁移			
+其他数据集
 
 train.py --用于训练 注意是用笔记本或台式不是树莓派运行---- tensorflow2.2 python3.8 
 代码参考 https://www.tensorflow.org/tutorials/load_data/images?hl=zh_cn
