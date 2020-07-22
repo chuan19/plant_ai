@@ -9,13 +9,17 @@
 神经网络迁移			
 其他数据集
 
-train.py --用于训练 注意是用笔记本或台式不是树莓派运行---- tensorflow2.2 python3.8 
+train.py 
+--用于训练 注意是用笔记本或台式不是树莓派运行
+---- tensorflow2.2 python3.8 
+
 代码参考 https://www.tensorflow.org/tutorials/load_data/images?hl=zh_cn
 代码参考 https://www.tensorflow.org/tutorials/keras/save_and_load?hl=zh_cn
 代码参考 https://www.tensorflow.org/lite/guide/get_started?hl=zh_cn#2_convert_the_model_format
 
 
-以下用树莓派运行 python3.7 tensoflow1.14
+以下用树莓派运行 -----python3.7 tensoflow1.14
+
 datasets  训练用的数据集
   -photos 里面每个文件夹是不同的类别 预测结果会给出不同类别的概率
 
